@@ -1,0 +1,16 @@
+{
+  "name": "my-nodejs-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install --production",
+    "test": "npm test"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "lodash": "^4.17.21"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.apps.ocp4.imss.co.in/repository/npm-hosted/"
+  }
+}
