@@ -2,31 +2,58 @@
 
 
   866  oc project nexus-
+  
   867  oc project nexus
+  
   868  oc get is
+  
   869  oc whoami --show-console
+  
   870  podman images
+  
   871  podman tag localhost/nodejs-image default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   872  podman images
+  
   873  podman push default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   879  podman login https://default-route-openshift-image-registry.apps.ocp4.imss.co.in
+  
   880  podman login https://default-route-openshift-image-registry.apps.ocp4.imss.co.in --tls-verify=false
+  
   881  podman push default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   882  podman push default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest --tls-verify=false
+  
   883  oc new-app --name nodejs-app --port 8080:8080 default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   884  oc new-app --name nodejs-app --port 8080:8080 --image=default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   885  oc new-app --name nodejs-app --port 8080:8080 --image-stream=default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   886  oc new-app --name nodejs-app --port 8080:8080 --image-stream default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   887  oc new-app --help
+  
   888  oc new-app --help | grep image-steram
+  
   889  oc new-app --help | grep image
+  
   891  oc new-app --name nodejs-app --port 8080:8080 --image-stream default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   892  oc new-app --name nodejs-app --image-stream default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest
+  
   893  oc new-app default-route-openshift-image-registry.apps.ocp4.imss.co.in/nexus/nodejs-image:latest --name=nodejs-app
+  
   894  oc get deployment
+  
   895  oc get events
+  
   896  ll
+
+  
   897  cat Dockerfile
+  
   898  vim Dockerfile
   899  ll
   900  rm -rf nexus-1.0.0.tgz
